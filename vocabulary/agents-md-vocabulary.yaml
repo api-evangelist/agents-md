@@ -1,0 +1,138 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: AGENTS.md
+  description: Vocabulary for the AGENTS.md open standard, covering the file format, supported tools, and concepts for providing context to AI coding agents.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+
+operational:
+  apis:
+    - name: AGENTS.md Specification
+      namespace: agents-md
+      version: "1.0"
+      baseUrl: https://agents.md
+      status: active
+
+  resources:
+    - name: agents-md-files
+      description: AGENTS.md files providing context to AI coding agents in repositories
+      actions:
+        - create
+        - read
+        - update
+    - name: build-commands
+      description: Commands for building the project
+      actions:
+        - define
+        - execute
+    - name: test-commands
+      description: Commands for running the project's test suite
+      actions:
+        - define
+        - execute
+    - name: coding-standards
+      description: Coding conventions and style guidelines documented for AI agents
+      actions:
+        - define
+        - enforce
+
+  actions:
+    - name: create
+      description: Create an AGENTS.md file in a project repository
+      pattern: write
+    - name: read
+      description: Read and parse an AGENTS.md file
+      pattern: read
+    - name: update
+      description: Update an AGENTS.md file with new context
+      pattern: write
+    - name: define
+      description: Specify build, test, or lint commands and standards
+      pattern: write
+    - name: execute
+      description: Run a defined command as an AI agent
+      pattern: write
+
+  schemas:
+    core:
+      - name: AgentsMdFile
+        description: Structured representation of an AGENTS.md file
+        properties:
+          - filename
+          - location
+          - project_name
+          - description
+          - build_commands
+          - test_commands
+          - lint_commands
+          - coding_standards
+          - security_notes
+
+  enums:
+    supported_tools:
+      - OpenAI Codex
+      - Google Jules
+      - Cursor
+      - Devin
+      - GitHub Copilot
+      - goose
+      - Windsurf
+      - JetBrains Junie
+      - Aider
+      - Warp
+      - UiPath
+      - Semgrep
+    command_types:
+      - build
+      - test
+      - lint
+      - format
+      - deploy
+      - migrate
+
+capability:
+  workflows:
+    - name: Agent Onboarding via AGENTS.md
+      description: Create an AGENTS.md file to provide an AI coding agent with the context needed to work effectively on a project
+      personas:
+        - Developer
+      domains:
+        - Developer Workflow
+    - name: AI-Assisted Development with Project Context
+      description: AI coding agent reads AGENTS.md to understand the project and autonomously implement features following documented standards
+      personas:
+        - AI Developer
+      domains:
+        - AI Coding
+
+  personas:
+    - id: developer
+      name: Developer
+      description: Software developer creating and maintaining AGENTS.md files for their projects
+      workflows:
+        - Agent Onboarding via AGENTS.md
+    - id: ai-developer
+      name: AI Developer
+      description: AI coding agent consuming AGENTS.md context to autonomously work on a project
+      workflows:
+        - AI-Assisted Development with Project Context
+
+  domains:
+    - name: Developer Workflow
+      description: Practices and tooling for software development workflows
+    - name: AI Coding
+      description: AI agents autonomously writing and reviewing code with project context
+
+crossReference:
+  - resource: agents-md-files
+    operations:
+      - create
+      - read
+      - update
+    workflows:
+      - Agent Onboarding via AGENTS.md
+      - AI-Assisted Development with Project Context
+    personas:
+      - Developer
+      - AI Developer

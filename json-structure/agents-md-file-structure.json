@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/agents-md/refs/heads/main/json-structure/agents-md-file-structure.json",
+  "name": "AgentsMdFile",
+  "description": "Representation of an AGENTS.md file's structured content providing context and instructions to AI coding agents.",
+  "type": "object",
+  "properties": {
+    "filename": {
+      "type": "string",
+      "description": "The filename, typically AGENTS.md.",
+      "example": "AGENTS.md"
+    },
+    "location": {
+      "type": "string",
+      "description": "File path within the repository.",
+      "example": "/AGENTS.md"
+    },
+    "project_name": {
+      "type": "string",
+      "description": "Name of the project or subproject this file applies to.",
+      "example": "My API Service"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the project's purpose and architecture.",
+      "example": "A REST API service built with FastAPI and PostgreSQL."
+    },
+    "build_commands": {
+      "type": "array",
+      "description": "Commands for building the project.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "example": "Install dependencies"
+          },
+          "command": {
+            "type": "string",
+            "example": "pip install -r requirements.txt"
+          }
+        }
+      }
+    },
+    "test_commands": {
+      "type": "array",
+      "description": "Commands for running tests.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "example": "Run unit tests"
+          },
+          "command": {
+            "type": "string",
+            "example": "pytest tests/ -v"
+          }
+        }
+      }
+    },
+    "lint_commands": {
+      "type": "array",
+      "description": "Commands for linting and formatting code.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "example": "Lint code"
+          },
+          "command": {
+            "type": "string",
+            "example": "ruff check . && black --check ."
+          }
+        }
+      }
+    },
+    "coding_standards": {
+      "type": "array",
+      "description": "Coding conventions and style guidelines for the project.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "Use snake_case for Python identifiers",
+        "Keep functions under 50 lines"
+      ]
+    },
+    "security_notes": {
+      "type": "array",
+      "description": "Security considerations and sensitive file locations agents should be aware of.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "Never commit .env files",
+        "Secrets are stored in AWS Secrets Manager"
+      ]
+    },
+    "created": {
+      "type": "date",
+      "description": "Date the AGENTS.md file was created.",
+      "example": "2026-01-15"
+    },
+    "modified": {
+      "type": "date",
+      "description": "Date the AGENTS.md file was last modified.",
+      "example": "2026-04-19"
+    }
+  },
+  "required": [
+    "filename"
+  ]
+}

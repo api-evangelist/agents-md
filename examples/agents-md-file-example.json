@@ -1,0 +1,35 @@
+{
+  "filename": "AGENTS.md",
+  "location": "/AGENTS.md",
+  "project_name": "Customer API Service",
+  "description": "A REST API service built with FastAPI and PostgreSQL that manages customer data and order processing for the e-commerce platform.",
+  "build_commands": [
+    { "label": "Install dependencies", "command": "pip install -r requirements.txt" },
+    { "label": "Run database migrations", "command": "alembic upgrade head" },
+    { "label": "Start development server", "command": "uvicorn main:app --reload" }
+  ],
+  "test_commands": [
+    { "label": "Run all tests", "command": "pytest tests/ -v" },
+    { "label": "Run tests with coverage", "command": "pytest tests/ --cov=app --cov-report=html" }
+  ],
+  "lint_commands": [
+    { "label": "Lint code", "command": "ruff check ." },
+    { "label": "Format code", "command": "black ." },
+    { "label": "Type check", "command": "mypy app/" }
+  ],
+  "coding_standards": [
+    "Use snake_case for all Python identifiers",
+    "Keep functions under 50 lines — split into helpers if longer",
+    "All API endpoints must have docstrings and type annotations",
+    "Prefer async/await for all database operations",
+    "Use Pydantic models for all request and response schemas"
+  ],
+  "security_notes": [
+    "Never commit .env files — use .env.example as a template",
+    "Database credentials are stored in AWS Secrets Manager, not environment variables",
+    "All API endpoints require JWT authentication except /health and /docs",
+    "Rate limiting is applied at the API gateway level, not in the service"
+  ],
+  "created": "2026-01-15",
+  "modified": "2026-04-19"
+}
