@@ -34,6 +34,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/openai/agents.md
 common:
+- type: DomainSecurity
+  url: security/agents-md-domain-security.yml
 - type: Portal
   url: https://agents.md/
 - type: Documentation
