@@ -47,6 +47,11 @@ apis:
   - type: GitHubRepository
     url: https://github.com/openai/agents.md
 common:
+- type: IssueTracker
+  url: https://github.com/openai/agents.md/issues
+- type: License
+  name: MIT
+  url: https://github.com/openai/agents.md/blob/main/LICENSE
 - type: DomainSecurity
   url: security/agents-md-domain-security.yml
 - type: Portal
