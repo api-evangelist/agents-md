@@ -7,6 +7,18 @@ description: AGENTS.md is an open standard file format that provides context and
 url: https://raw.githubusercontent.com/api-evangelist/agents-md/refs/heads/main/apis.yml
 humanURL: https://agents.md/
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
