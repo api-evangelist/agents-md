@@ -59,6 +59,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/openai/agents.md
 common:
+- type: Website
+  url: https://www.agents.md/
 - type: IssueTracker
   url: https://github.com/openai/agents.md/issues
 - type: License
