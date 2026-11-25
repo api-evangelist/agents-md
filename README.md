@@ -1,4 +1,4 @@
-# agents-md
+# AGENTS.md
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,9 +64,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-## agents-md on APIs.io
+AGENTS.md is an open standard file format that provides context and instructions to AI coding agents working on software projects. Like a README for agents, an AGENTS.md file lives in the project repository and tells AI agents how to build, test, and contribute code — including coding standards, build commands, testing procedures, and development conventions. Supported by over 60,000 open-source projects and major platforms including OpenAI Codex, Google Jules, Cursor, Devin, Windsurf, GitHub Copilot, and goose. Stewarded by the Agentic AI Foundation under the Linux Foundation.
 
-Everything profiled for agents-md is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agents-md/](https://apis.io/providers/agents-md/)** — or go straight to one of the APIs or properties below.
+**Areas:** AI Agents · AI Copilot · Coding Standards · Developer Workflow · Open Standard · Documentation
+
+## AGENTS.md on APIs.io
+
+Everything profiled for AGENTS.md is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agents-md/](https://apis.io/providers/agents-md/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- AGENTS.md Specification — The AGENTS.md specification defines a standard Markdown file format for providing project context, build instructions, coding standards, and testing…
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.agents.md/)
+- [Documentation](https://agents.md/)
+- [GitHub](https://github.com/agentic-ai-foundation)
 
 ## API Evangelist rating
 
@@ -76,7 +92,7 @@ Not yet rated. See [apis.io/providers/agents-md/](https://apis.io/providers/agen
 
 API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for agents-md: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AGENTS.md: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
 ## Open an issue
 
